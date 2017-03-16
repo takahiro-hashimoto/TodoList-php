@@ -1,0 +1,33 @@
+.l-container {
+  width: 720px;
+  margin: 40px auto;
+}
+
+.task-input {
+  width: 615px!important ;
+}
+
+.itemList-item button {
+  float: right;
+}
+
+.edit-input {
+    margin: 0;
+    -webkit-box-flex: 1;
+    -webkit-flex-grow: 1;
+    -ms-flex-positive: 1;
+    flex-grow: 1;
+    outline: 0;
+    -webkit-tap-highlight-color: rgba(255,255,255,0);
+    text-align: left;
+    line-height: 1.2142em;
+    font-family: Lato,'Helvetica Neue',Arial,Helvetica,sans-serif;
+    padding: .67861em 1em;
+    background: #fff;
+    border: 1px solid rgba(0,0,0,.15);
+    color: rgba(0,0,0,.8);
+    border-radius: .2857rem;
+    -webkit-transition: background-color .2s ease,box-shadow .2s ease,border-color .2s ease;
+    transition: background-color .2s ease,box-shadow .2s ease,border-color .2s ease;
+    box-shadow: none;
+}
