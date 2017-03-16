@@ -1,11 +1,10 @@
 <?php
 //MySQLへの接続
 function db_connect(){
-  try{ //接続をトライ
+  try{
   return new PDO(DSN,DB_USER,DB_PASSWORD);
-  //MySQLへ接続　どこかにDSN,DB_USER,DB_PASSWORDをそれぞれ定義する必要がある
-  }catch (PDOException $e){  //接続できなかった場合$eへエラーが格納される
-    echo $e ->getMessage();//エラーメッセージを出力
+  }catch (PDOException $e){
+    echo $e ->getMessage();
     exit;
   }
 }
