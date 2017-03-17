@@ -13,7 +13,7 @@ $(function(){
     } else {
       var title = $("#js-input-task").val();
       $.post('add.php', {title:title}, function(num){
-        var itemStr = $('<div id="js-itemList-'+num+'"data-id="'+num+'" class="ui segment itemList-item"><span>title</span> <button class="edit ui button">編集</button><button class="delete ui button">完了</button></div>');
+        var itemStr = $('<div id="js-itemList-' + num + '"data-id="' + num + '" class="ui segment itemList-item"><span>title</span><button class="edit ui button">編集</button><button class="delete ui button">完了</button></div>');
         $inputTask.val('').focus();
       });
     }
@@ -34,7 +34,7 @@ $(function(){
   $(document).on('click', '.edit', function(){
   　　var id= $(this).parent().data('id');
   　　var title = $(this).prev().text();
-  　　$('#js-itemList-' + id).empty().append($('<input class="edit-input task-input" type="text">').attr('value',title)).append('<button class="update ui button">更新</button>');
+  　　$('#js-itemList-' + id).empty().append($('<input class="edit-input task-input" type="text">').attr('value', title)).append('<button class="update ui button">更新</button>');
   　　$('#js-itemList-' + id + 'input:eq(0)').focus();
   });
 
