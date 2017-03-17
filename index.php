@@ -8,6 +8,7 @@ foreach($dbh->query($sql) as $row){
   array_push($tasks,$row);
 }
 ?>
+
 <!DOCTYPE html>
 <html lang="ja">
 <head>
@@ -36,16 +37,16 @@ foreach($dbh->query($sql) as $row){
 
   <!-- itemList▼ -->
   <div id="js-itemList" class="ui segments itemList">
-  <?php foreach($tasks as $task): ?>
+    <?php foreach($tasks as $task): ?>
     <div id="js-itemList-<?php echo h($task['id']); ?>" class="ui segment itemList-item" data-id="<?php echo h($task['id']); ?>">
       <span><?php echo h($task['title']); ?></span>
       <button class="edit ui button">編集</button>
       <button class="delete ui button">完了</button>
     </div>
-   <?php endforeach; ?>
+    <?php endforeach; ?>
   </div>
-
   <!-- itemList▲ -->
+  
 </div>
 <!-- l-container▲ -->
 </body>
